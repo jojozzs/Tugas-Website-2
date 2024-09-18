@@ -1,10 +1,12 @@
+import $ from "jquery";
 import './style.css'
 import javascriptLogo from './javascript.svg'
 import viteLogo from '/vite.svg'
 import { setupCounter } from './counter.js'
-import { byeMsg, helloMSg } from './helloMsg..js'
+import  helloMSg, {byeMsg  } from './helloMsg..js'
 
-document.querySelector('#app').innerHTML = `
+
+$('#app').html( `
   <div>
     <a href="https://vitejs.dev" target="_blank">
       <img src="${viteLogo}" class="logo" alt="Vite logo" />
@@ -27,7 +29,8 @@ document.querySelector('#app').innerHTML = `
     </p>
   </div>
 `
+)
 
-setupCounter(document.querySelector('#counter'))
-helloMSg(document.querySelector('#hello'))
-byeMsg(document.querySelector('#bye'))
+setupCounter($('#counter'))
+helloMSg($('#hello'))
+byeMsg($('#bye'))

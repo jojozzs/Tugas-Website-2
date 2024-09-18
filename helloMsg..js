@@ -1,10 +1,11 @@
-export const helloMSg = (element) => {
-    element.innerHTML = 'Hello'
-    element.addEventListener('click', ()=> alert("Hello"))
+const helloMSg = (element) => {
+    element.text ('Hello')
+    element.click(()=> alert("Hello"))
 }
-export const byeMsg =(element) => {
-    element.innerHTML = 'Bye'
-    element.addEventListener('click', ()=> alert("Bye"))
+const byeMsg =(element) => {
+    element.text  ('Bye')    
+    element.click(()=> alert("Bye"))
 }
 
-
+export default helloMSg
+export {byeMsg}
