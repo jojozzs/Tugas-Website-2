@@ -2,7 +2,8 @@ import $ from "jquery";
 import './style.css'
 import javascriptLogo from './javascript.svg'
 import viteLogo from '/vite.svg'
-import changingtext from "./changingtext.js";
+import { setupCounter } from './counter.js'
+import  helloMSg, {byeMsg  } from './helloMsg..js'
 
 
 $('#app').html( `
@@ -13,16 +14,23 @@ $('#app').html( `
     <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank">
       <img src="${javascriptLogo}" class="logo vanilla" alt="JavaScript logo" />
     </a>
-    <h1 id="isi">Hello Vite!</h1>
+    <h1>Hello Vite!</h1>
     <div class="card">
-      <button id="changetext" type="button"></button>
+      <button id="counter" type="button"></button>
+    </div>
+    <div class= "card">
+      <button id="hello" type"button"></button>
+    </div>
+    <div class= "card">
+      <button id="bye" type"button"></button>
     </div>
     <p class="read-the-docs">
       Click on the Vite logo to learn more
-    </p>  
-    
+    </p>
   </div>
 `
 )
 
-changingtext($('#changetext)'))
+setupCounter($('#counter'))
+helloMSg($('#hello'))
+byeMsg($('#bye'))
